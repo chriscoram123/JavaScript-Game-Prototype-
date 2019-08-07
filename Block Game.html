@@ -5,6 +5,14 @@
 </head>
 
 <style>
+h1 {
+color: red;
+}
+h2 {
+font-size: 20px;
+position: relative;
+top: 30px;
+}
 canvas {
 background: #7CFC00;
 display: block;
@@ -14,14 +22,16 @@ margin: 0 auto;
 
 <body>
  <center>
- 	<h1> Simple Game 2 </h1>
- 	<p>INSTRUCTIONS:</p>
+ 	<h1> JS Block Game / Simple Game Series </h1>
+ 	<p>INSTRUCTIONS: Keep the ball from bouncing behined the paddle.
+ 	   To control paddle, hit the left and right keys.</p>
  </center>
  	<canvas id="Game" height="480px" width="490px"></canvas>
  	<br>
     </br>
 <center>
  	<hr></hr>
+ 	<h2>Copywrite* All images and object models have been produced from scratch</h2>
 </center>
 <script>
 // @author: Christopher S Coram
@@ -64,7 +74,7 @@ var object1_Height = 10;
 var object1_Width = 75;
 var ob1_x = 50;
 var ob1_y = 50;
-var object_x = (canvas.width-object1_Width) / 2;
+var object1_x = (canvas.width-object1_Width) / 2;
 //...
 
 // Variables for obstacle 2...
@@ -72,7 +82,7 @@ var object2_Height = 10;
 var object2_Width = 75;
 var ob2_x = 150;
 var ob2_y = 200;
-var object_x = (canvas.width-object2_Width) / 2;
+var object2_x = (canvas.width-object2_Width) / 2;
 //...
 
 // Variables for obstacle 3...
@@ -80,7 +90,7 @@ var object3_Height = 10;
 var object3_Width = 75;
 var ob3_x = 350;
 var ob3_y = 250;
-var object_x = (canvas.width-object3_Width) / 2;
+var object3_x = (canvas.width-object3_Width) / 2;
 //...
 
 // Variables for obstacle 4...
@@ -88,7 +98,7 @@ var object4_Height = 10;
 var object4_Width = 75;
 var ob4_x = 234;
 var ob4_y = 126;
-var object_x = (canvas.width-object4_Width) / 2;
+var object41_x = (canvas.width-object4_Width) / 2;
 //...
 
 
@@ -203,7 +213,7 @@ function draw() {
     	}
     }
     //....
-    
+
     // Checks to see if left or right cursor keys are pressed
     if(rightPressed && paddleX < canvas.width - paddleWidth) {
     	paddleX += 7;
